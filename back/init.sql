@@ -1,0 +1,3 @@
+CREATE DATABASE db_gep_back;
+CREATE DATABASE cdc_db;
+CREATE DATABASE ces_db;
