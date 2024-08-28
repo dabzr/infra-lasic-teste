@@ -27,7 +27,7 @@ services:
     networks:
       - backend-network
     environment:
-      DATABASE_URL: postgresql://postgres:admin@db:5432/db-gep-back
+      DATABASE_URL: postgresql://postgres:postgres@db:5432/gep_db
       FRONTEND_URL: "http://gep.lasicifce.com"
       BACKEND_URL: "http://gep_backend:5000"
 
@@ -45,6 +45,7 @@ services:
     networks:
       - backend-network
     environment:
+      POSTGRES_HOST: db
       POSTGRES_PORT: 5432
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
