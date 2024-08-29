@@ -55,13 +55,13 @@ services:
 
   ## CES
   redis:
-    image: redis:latest
+    image: redis/redis-stack-server:latest
       #restart: always
     container_name: redis
     networks:
       - backend-network
     expose:
-      - "6380"
+      - "6379"
     depends_on:
       - db
     volumes:
@@ -84,8 +84,8 @@ services:
       FLASK_DEBUG: "true"
       FLASK_RUN_PORT: 8006
       BACKEND_URL: http://ces_backend:8006
-      FRONTEND_URL: http://ces.lasicifce.com:81
-      REDIS_OM_URL: redis://default:admin@redis:6380/0
+      FRONTEND_URL: http://ces.lasicifce.com
+      REDIS_OM_URL: redis://default:admin@redis:6379/0
   nginx:
     image: nginx:latest
     container_name: nginx-proxy2
