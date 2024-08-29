@@ -26,7 +26,7 @@ services:
       - ces_static:/home/node/app/.next
     environment:
       NEXT_PUBLIC_FRONTEND_URL: "http://ces_frontend:3000"
-      NEXT_PUBLIC_BACKEND_URL: "http://localhost:5000/v1"
+      NEXT_PUBLIC_BACKEND_URL: "http://ces.lasicifce.com:5000/v1"
     networks:
       - front-network
  
